@@ -1,0 +1,61 @@
+:root {
+    /**
+	 * Colours
+	 */
+    --rgb--1: 26, 36, 66; /* #1A2442 */
+
+    --color--1: white;
+    --color--2: black;
+    --color--3: purple;
+    --color--4: aqua;
+
+    /**
+	 * Font families
+	 */
+    --family--1: "Courier Prime";
+    --family--2: "Montserrat";
+
+    /* Font fallbacks (retrieved from systemfontstack.com)
+	 * Sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+	 * Serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	 * Mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+	 */
+    --family-fallback: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+        segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
+        arial, sans-serif;
+
+    /**
+	 * Containers
+	 */
+    --container-max-width-1: 1620px;
+    --container-max-width-2: 1140px;
+    --container-max-width-3: 940px;
+
+    /* Default padding */
+    --container-padding-xl: 50px;
+    --container-padding-lg: 40px;
+    --container-padding-sm: 4.5vw;
+
+    /**
+	 * Base
+	 */
+    --base--bg-color: #000000;
+    --base--text-color: #eff1ef;
+    --base--font-family: var(--family--1);
+
+    /**
+	* Scroller
+	*/
+    --scroller-width: 5px;
+    --scroller-height: calc(var(--dvh, 1vh) * 40);
+    --scroller-distance-right: 0;
+    --scroller-distance-color: rgba(255, 255, 255, 0.1);
+    --scroller-indicator-color: var(--color--1);
+    --scroller-transition-duration: 0.4s;
+    --scroller-background-color: rgba(0, 0, 0, 0.8);
+    --scroller-background-shadow: drop-shadow(0 20px 13px #00000008)
+        drop-shadow(0 8px 5px #00000014);
+    --scroller-background-blur: blur(20px);
+    --scroller-background-padding-x: 4px;
+    --scroller-background-padding-y: 4px;
+}

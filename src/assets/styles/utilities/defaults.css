@@ -1,0 +1,30 @@
+/**
+ * Default component class
+ */
+.u-comp-def--1 {
+    color: var(--base--text-color) var(--base--bg-color);
+    display: block;
+    font-size: 0;
+    overflow: clip;
+    position: relative;
+    width: 100%;
+
+    /**
+	 * Modifiers
+	 */
+
+    /* Overflow */
+    &[class*="u-z-index--"] {
+        overflow: visible;
+    }
+
+    /* Theme */
+    &.-theme--f2f1f2 {
+        background: var(--color--3);
+    }
+
+    &.-theme--1c1c1c {
+        background: var(--color--2);
+        color: #fff;
+    }
+}

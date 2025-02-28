@@ -1,0 +1,4 @@
+/* Loading state */
+html.is-loading {
+    cursor: wait;
+}

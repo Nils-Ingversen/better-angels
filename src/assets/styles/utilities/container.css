@@ -1,0 +1,41 @@
+.u-container {
+    margin-inline: auto;
+    width: 100%;
+}
+
+/**
+ * Default padding
+ */
+.u-container--pad {
+    padding-inline: var(--container-padding-sm, 4.5vw);
+
+    @media (--xl-up) {
+        padding-inline: var(--container-padding-xl, 50px);
+    }
+    @media (--lg-xl) {
+        padding-inline: var(--container-padding-lg, 40px);
+    }
+}
+
+/**
+ * Sizes
+ */
+@for $i from 1 to 3 {
+    .u-container--$(i) {
+        --width: var(--container-max-width-$(i));
+        max-width: var(--container-max-width-$(i));
+
+        &.u-container--pad {
+            @media (--xl-up) {
+                max-width: calc(
+                    var(--width) + calc(2 * var(--container-padding-xl, 50px))
+                );
+            }
+            @media (--lg-xl) {
+                max-width: calc(
+                    var(--width) + calc(2 * var(--container-padding-lg, 40px))
+                );
+            }
+        }
+    }
+}

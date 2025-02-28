@@ -1,0 +1,49 @@
+/**
+ * Media queries
+ */
+/* Custom */
+@custom-media --padded-container--1-xl (min-width: 1520px);
+
+/* Larger than */
+@custom-media --xs-up (min-width: 481px);
+@custom-media --sm-up (min-width: 641px);
+@custom-media --md-up (min-width: 769px);
+@custom-media --lg-up (min-width: 1025px);
+@custom-media --xl-up (min-width: 1281px);
+@custom-media --2xl-up (min-width: 1537px);
+@custom-media --3xl-up (min-width: 1601px);
+
+/* Between (range) */
+@custom-media --xs-sm (min-width: 481px) and (max-width: 640px);
+@custom-media --xs-md (min-width: 481px) and (max-width: 768px);
+@custom-media --xs-lg (min-width: 481px) and (max-width: 1024px);
+@custom-media --xs-xl (min-width: 481px) and (max-width: 1280px);
+@custom-media --xs-2xl (min-width: 481px) and (max-width: 1536px);
+@custom-media --xs-3xl (min-width: 481px) and (max-width: 1600px);
+@custom-media --sm-md (min-width: 641px) and (max-width: 768px);
+@custom-media --sm-lg (min-width: 641px) and (max-width: 1024px);
+@custom-media --sm-xl (min-width: 641px) and (max-width: 1280px);
+@custom-media --sm-2xl (min-width: 641px) and (max-width: 1536px);
+@custom-media --sm-3xl (min-width: 641px) and (max-width: 1600px);
+@custom-media --md-lg (min-width: 769px) and (max-width: 1024px);
+@custom-media --md-xl (min-width: 769px) and (max-width: 1280px);
+@custom-media --md-2xl (min-width: 769px) and (max-width: 1536px);
+@custom-media --md-3xl (min-width: 769px) and (max-width: 1600px);
+@custom-media --lg-xl (min-width: 1025px) and (max-width: 1280px);
+@custom-media --lg-2xl (min-width: 1025px) and (max-width: 1536px);
+@custom-media --lg-3xl (min-width: 1025px) and (max-width: 1600px);
+@custom-media --xl-2xl (min-width: 1281px) and (max-width: 1536px);
+@custom-media --xl-3xl (min-width: 1281px) and (max-width: 1600px);
+@custom-media --2xl-3xl (min-width: 1537px) and (max-width: 1600px);
+
+/* Smaller than */
+@custom-media --xs-down (max-width: 480px);
+@custom-media --sm-down (max-width: 640px);
+@custom-media --md-down (max-width: 768px);
+@custom-media --lg-down (max-width: 1024px);
+@custom-media --xl-down (max-width: 1280px);
+@custom-media --2xl-down (max-width: 1536px);
+@custom-media --3xl-down (max-width: 1600px);
+
+/* States */
+@custom-media --hover (hover);

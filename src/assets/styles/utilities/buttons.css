@@ -1,0 +1,81 @@
+/**
+ * Disable button
+ */
+%u-disable-button {
+    appearance: none;
+    box-shadow: none;
+    outline: none;
+}
+
+@for $i from 1 to 2 {
+    .u-btn--$(i) {
+        @extend %u-disable-button;
+        cursor: pointer;
+        user-select: none;
+        width: fit-content;
+    }
+}
+
+/**
+ * Primary button
+ */
+.u-btn--1 {
+    display: flex;
+    align-items: center;
+    background: var(--color--1);
+    color: var(--color--2);
+    height: 30px;
+    margin-inline: auto;
+
+    .btn_label {
+        align-items: center;
+        display: inline-flex;
+        flex: 1 1 auto;
+        font-family: var(--family--3);
+        font-size: 13px / 1em;
+        font-weight: 400;
+        justify-content: center;
+        letter-spacing: 1px;
+        padding: 20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    /* Hover */
+    @media (hover) {
+        &:hover {
+            background-color: var(--color--3);
+            .btn_label {
+                color: var(--color--1);
+            }
+        }
+    }
+}
+
+.u-btn--2 {
+    width: 220px;
+    font-family: var(--family--2);
+    font-size: responsive 20px 23px;
+    font-range: 420px 1620px;
+    line-height: 1em;
+    font-weight: 700;
+    color: var(--color--1);
+    border: 1px solid var(--color--1);
+    background-color: var(--base--bg-color);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: all 0.2s easeInOutSine;
+
+    .btn_label {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hover */
+    @media (hover) {
+        &:hover {
+            background-color: var(--color--1);
+            color: #fff;
+        }
+    }
+}

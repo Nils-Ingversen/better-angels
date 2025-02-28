@@ -1,0 +1,15 @@
+.c-exemplu {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .inner {
+    }
+
+    .title {
+        font-size: responsive 36px 120px;
+        font-range: 420px 1620px;
+        font-family: var(--family--2);
+    }
+}

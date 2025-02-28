@@ -1,0 +1,41 @@
+/**
+ * HTML document & body
+ */
+html,
+body {
+    /* Layout */
+    max-width: 100%;
+    min-height: 100%;
+    min-width: 320px;
+    overflow-x: clip;
+    width: 100%;
+
+    /* Typography */
+    font: 16px/100% var(--base--font-family), var(--family-fallback);
+    font-weight: 400;
+
+    /* Colors */
+    background: var(--base--bg-color, #fff);
+    color: var(--base--text-color, #000);
+
+    /* Font smoothing */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    /* Scroll behaviour */
+    scroll-behavior: initial;
+    min-height: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    &:not(.has-reduced-motion) {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
