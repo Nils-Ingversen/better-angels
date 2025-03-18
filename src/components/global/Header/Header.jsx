@@ -1,27 +1,68 @@
 import Container from "@/containers/Container";
 import "./Header.css";
+import logo from "@/assets/images/logo.svg";
+import ButtonFlip from "@/objects/ButtonFlip.jsx";
+import ButtonArrow from "@/objects/ButtonArrow.jsx";
+import NavbarMenu from "@/objects/NavbarMenu";
+import { useRef, useState } from "react";
 
 function Header() {
+    const navIconRef = useRef();
+    const [isOpen, setIsOpen] = useState(false);
+    const handleClick = () => {
+        setIsOpen(!isOpen);
+    };
     return (
         <Container name="header" tag="header" import>
             <div className="logo">
-                <img
-                    src="https://images.unsplash.com/photo-1559583985-c80d8ad9b29f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwxMDY1OTc2fHxlbnwwfHx8fHw%3D"
-                    alt="logo"
-                    className="logo_img"
-                />
+                <img src={logo} alt="logo" className="logo_svg" />
             </div>
             <nav className="link_items">
-                <a href="#" className="item_link">
-                    <span className="link_label">Home</span>
-                </a>
-                <a href="#" className="item_link">
-                    <span className="link_label">About</span>
-                </a>
-                <a href="#" className="item_link">
-                    <span className="link_label">Contact</span>
-                </a>
+                <ButtonFlip classes="item_link" href="#">
+                    Mission
+                </ButtonFlip>
+                <ButtonFlip classes="item_link" href="#">
+                    Our Companies
+                </ButtonFlip>
+                <ButtonFlip classes="item_link" href="#">
+                    Testimonials
+                </ButtonFlip>
+                <ButtonFlip classes="item_link" href="#">
+                    Newslatter
+                </ButtonFlip>
+                <ButtonArrow classes="item_link" href="#">
+                    Contact
+                </ButtonArrow>
             </nav>
+            <div
+                className={`mobile_icon ${isOpen ? "open" : ""}`}
+                ref={navIconRef}
+                onClick={handleClick}
+            >
+                <NavbarMenu />
+            </div>
+            <div className={`overlay_mobile ${isOpen ? "open" : ""}`}>
+                <ButtonFlip classes="item_link" href="#">
+                    Mission
+                </ButtonFlip>
+                <div className="u-line"></div>
+                <ButtonFlip classes="item_link" href="#">
+                    Our Companies
+                </ButtonFlip>
+                <div className="u-line"></div>
+                <ButtonFlip classes="item_link" href="#">
+                    Testimonials
+                </ButtonFlip>
+                <div className="u-line"></div>
+                <ButtonFlip classes="item_link" href="#">
+                    Newslatter
+                </ButtonFlip>
+                <div className="u-line"></div>
+                <ButtonFlip classes="item_link" href="#">
+                    Contact
+                </ButtonFlip>
+            </div>
+            <div className={`overlay_bg ${isOpen ? "open" : ""}`}></div>
         </Container>
     );
 }

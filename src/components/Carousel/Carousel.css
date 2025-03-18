@@ -1,0 +1,20 @@
+.carousel_box {
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    padding: 18px 0;
+
+    .carousel {
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+    }
+
+    .title {
+        color: var(--color--2);
+        font-size: responsive 48px 90px;
+        font-range: 420px 1440px;
+        font-family: var(--family--2);
+        line-height: 109%;
+    }
+}

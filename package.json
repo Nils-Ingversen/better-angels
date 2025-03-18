@@ -10,11 +10,14 @@
     },
     "dependencies": {
         "@gsap/react": "^2.1.2",
+        "framer-motion": "^12.4.10",
         "gsap": "^3.12.7",
         "lenis": "^1.1.20",
         "mouse-follower": "^1.1.2",
         "react": "^18.3.1",
-        "react-dom": "^18.3.1"
+        "react-dom": "^18.3.1",
+        "react-router": "^7.2.0",
+        "swiper": "^11.2.5"
     },
     "devDependencies": {
         "@csstools/postcss-global-data": "^2.1.1",

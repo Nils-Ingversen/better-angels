@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
+import Home from "./Home.jsx";
 import "./assets/styles/base/imports.css";
 
 // Import CSS files
@@ -17,6 +17,6 @@ scroller.init();
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <App />
+        <Home />
     </StrictMode>
 );

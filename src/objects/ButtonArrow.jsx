@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
 import lenis from "@/vendors/lenis.js";
+import arrow from "@/assets/images/arrow.svg";
 
 const Button = ({ children, ...props }) => {
     const {
@@ -10,7 +11,7 @@ const Button = ({ children, ...props }) => {
         scroll,
         onClick,
     } = props;
-    const btnClasses = `btn u-btn--1 ${className ? className : ""}`;
+    const btnClasses = `btn u-btn--3 ${className ? className : ""}`;
     const isExternal = href.startsWith("http");
     const isAnchor = href.startsWith("#");
 
@@ -35,7 +36,13 @@ const Button = ({ children, ...props }) => {
                 onClick={handleClick}
                 data-cursor="-pointer"
             >
+                <figure className="btn_arrow_after">
+                    <img className="arrow_image" src={arrow}></img>
+                </figure>
                 <span className="btn_label">{children}</span>
+                <figure className="btn_arrow">
+                    <img className="arrow_image" src={arrow}></img>
+                </figure>
             </a>
         );
     }
@@ -51,7 +58,13 @@ const Button = ({ children, ...props }) => {
                 onClick={handleClick}
                 data-cursor="-pointer"
             >
+                <figure className="btn_arrow_before">
+                    <img className="arrow_image" src={arrow}></img>
+                </figure>
                 <span className="btn_label">{children}</span>
+                <figure className="btn_arrow">
+                    <img className="arrow_image" src={arrow}></img>
+                </figure>
             </a>
         );
     }
@@ -66,7 +79,13 @@ const Button = ({ children, ...props }) => {
             data-cursor="-pointer"
             end
         >
+            <figure className="btn_arrow_before">
+                <img className="arrow_image" src={arrow}></img>
+            </figure>
             <span className="btn_label">{children}</span>
+            <figure className="btn_arrow">
+                <img className="arrow_image" src={arrow}></img>
+            </figure>
         </NavLink>
     );
 };

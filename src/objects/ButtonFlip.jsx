@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import lenis from "@/vendors/lenis.js";
 
-const Button = ({ children, ...props }) => {
+const ButtonFlip = ({ children, ...props }) => {
     const {
         className,
         href,
@@ -10,7 +10,7 @@ const Button = ({ children, ...props }) => {
         scroll,
         onClick,
     } = props;
-    const btnClasses = `btn u-btn--1 ${className ? className : ""}`;
+    const btnClasses = `btn u-btn--2 ${className ? className : ""}`;
     const isExternal = href.startsWith("http");
     const isAnchor = href.startsWith("#");
 
@@ -36,6 +36,7 @@ const Button = ({ children, ...props }) => {
                 data-cursor="-pointer"
             >
                 <span className="btn_label">{children}</span>
+                <span className="btn_label_up">{children}</span>
             </a>
         );
     }
@@ -51,6 +52,7 @@ const Button = ({ children, ...props }) => {
                 onClick={handleClick}
                 data-cursor="-pointer"
             >
+                <span className="btn_label_up">{children}</span>
                 <span className="btn_label">{children}</span>
             </a>
         );
@@ -67,11 +69,12 @@ const Button = ({ children, ...props }) => {
             end
         >
             <span className="btn_label">{children}</span>
+            <span className="btn_label_up">{children}</span>
         </NavLink>
     );
 };
 
-export default Button;
+export default ButtonFlip;
 
 /**
  * Instructions:

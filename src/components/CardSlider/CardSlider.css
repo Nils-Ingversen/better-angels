@@ -1,0 +1,168 @@
+.c-card-slider {
+    padding: 51px 0 51px 0;
+    .c_inner {
+    }
+
+    .swiper-wrapper {
+    }
+
+    .swiper-slide {
+        display: flex;
+        position: relative;
+        min-height: 556px;
+        aspect-ratio: 452/556;
+        min-width: 452px;
+        border-radius: 10px;
+        padding: 30px;
+        overflow: hidden;
+        background-color: white;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        &:hover {
+            .img_box {
+                opacity: 0;
+            }
+
+            .card_title {
+                color: var(--color--2);
+            }
+        }
+
+        @media (--md-down) {
+            min-width: 290px;
+            min-height: 360px;
+            aspect-ratio: 290/360;
+        }
+
+        .card_title {
+            font-family: var(--family--2);
+            font-size: responsive 80px 132px;
+            font-range: 420px 1440px;
+            line-height: 95%;
+            text-transform: uppercase;
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            color: var(--color--1);
+            transform: rotate(-90deg);
+            transform-origin: bottom;
+            z-index: 2;
+            transition: color 0.4s ease;
+        }
+
+        .img_box {
+            position: absolute 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+
+            .img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transform: scale(1.05);
+            }
+        }
+
+        .bottom_content {
+            display: flex;
+            flex-direction: column;
+            max-width: 250px;
+            width: 100%;
+            color: var(--color--2);
+            gap: 27px;
+
+            .text {
+                font-family: var(--family--1);
+                font-size: responsive 16px 14px;
+                font-range: 420px 1440px;
+                line-height: 109%;
+                font-family: var(--family--3);
+            }
+
+            .link {
+                font-family: var(--family--1);
+                font-size: responsive 16px 12px;
+                font-range: 420px 1440px;
+                line-height: 109%;
+            }
+
+            .buttons {
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+
+                .tag {
+                    font-family: var(--family--1);
+                    font-size: responsive 16px 15px;
+                    font-range: 420px 1440px;
+                    line-height: 109%;
+                    text-transform: uppercase;
+                    border: solid black 1px;
+                    border-radius: 70px;
+                    padding: 7px 10px;
+                }
+            }
+        }
+    }
+
+    .swiper_controls {
+        display: flex;
+        gap: 26px;
+        margin-top: 49px;
+        align-items: center;
+        .arrows {
+            display: flex;
+
+            .btn_arrow {
+                background-color: var(--color--3);
+                border-radius: 50%;
+                width: 38px;
+                height: 38px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: rotate(135deg);
+                cursor: pointer;
+                .arrow_image {
+                    width: 12px;
+                    height: 12px;
+                    object-fit: cover;
+                }
+            }
+            .btn_arrow2 {
+                background-color: var(--color--3);
+                border-radius: 50%;
+                width: 38px;
+                height: 38px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: rotate(-45deg);
+                cursor: pointer;
+
+                .arrow_image {
+                    width: 12px;
+                    height: 12px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .scroll_bar {
+            position: relative;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            height: 1px;
+
+            .swiper-pagination-progressbar-fill {
+                background-color: var(--color--1);
+            }
+        }
+    }
+
+    .btn {
+        margin-top: 32px;
+        margin-inline: auto;
+    }
+}

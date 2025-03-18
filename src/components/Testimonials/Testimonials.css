@@ -1,0 +1,167 @@
+.c-testimonials {
+    padding: 70px 0 70px 0;
+    .c_inner {
+        display: flex;
+        flex-direction: row;
+
+        @media (--md-down) {
+            flex-direction: column;
+        }
+    }
+
+    .image_box {
+        width: 45%;
+        margin-top: -50px;
+
+        @media (--md-xl) {
+            width: 35%;
+            margin-top: 0;
+        }
+
+        @media (--md-down) {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+
+    .swiper_image {
+        overflow: hidden;
+    }
+
+    .swiper-slide {
+        .img_box {
+            aspect-ratio: 655/876;
+            .img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .content_box {
+        background-color: var(--color--1);
+        width: 55%;
+        color: var(--color--2);
+        padding: 180px 117px 190px 125px;
+        position: relative;
+
+        @media (--md-xl) {
+            width: 65%;
+            padding: 100px 50px 100px 50px;
+        }
+
+        @media (--md-down) {
+            width: 100%;
+            padding: 50px 20px 50px 20px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 20%;
+            height: 100%;
+            background-color: var(--color--1);
+
+            bottom: 0;
+            left: 0;
+            transform: translate(-99%, 0);
+            display: block;
+
+            @media (--md-down) {
+                display: none;
+            }
+        }
+
+        .swiper_content {
+            overflow: hidden;
+        }
+
+        .swiper-slide {
+            .text {
+                font-size: responsive 44px 72px;
+                font-range: 420px 1440px;
+                line-height: 80%;
+                font-family: var(--family--2);
+                text-transform: uppercase;
+            }
+
+            .buttons {
+                margin-top: 24px;
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+                .tag {
+                    font-family: var(--family--1);
+                    font-size: responsive 16px 15px;
+                    font-range: 420px 1440px;
+                    line-height: 109%;
+                    text-transform: uppercase;
+                    border: solid black 1px;
+                    border-radius: 70px;
+                    padding: 7px 10px;
+
+                    &:first-child {
+                        background-color: var(--color--2);
+                        color: var(--color--1);
+                    }
+                }
+            }
+        }
+    }
+
+    .swiper_controls {
+        display: flex;
+        gap: 26px;
+        margin-top: 49px;
+        align-items: center;
+        .arrows {
+            display: flex;
+
+            .btn_arrow {
+                background-color: var(--color--3);
+                border-radius: 50%;
+                width: 38px;
+                height: 38px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: rotate(135deg);
+                cursor: pointer;
+                .arrow_image {
+                    width: 12px;
+                    height: 12px;
+                    object-fit: cover;
+                }
+            }
+            .btn_arrow2 {
+                background-color: var(--color--3);
+                border-radius: 50%;
+                width: 38px;
+                height: 38px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: rotate(-45deg);
+                cursor: pointer;
+
+                .arrow_image {
+                    width: 12px;
+                    height: 12px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .scroll_bar {
+            position: relative;
+            width: 100%;
+            background-color: #05050520;
+            height: 1px;
+
+            .swiper-pagination-progressbar-fill {
+                background-color: #050505;
+            }
+        }
+    }
+}

@@ -6,14 +6,14 @@
 
     --color--1: white;
     --color--2: black;
-    --color--3: purple;
-    --color--4: aqua;
+    --color--3: #95e0ea;
 
     /**
 	 * Font families
 	 */
-    --family--1: "Courier Prime";
-    --family--2: "Montserrat";
+    --family--1: "space-grotesk";
+    --family--2: "druk";
+    --family--3: "quicksand";
 
     /* Font fallbacks (retrieved from systemfontstack.com)
 	 * Sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
@@ -27,13 +27,12 @@
     /**
 	 * Containers
 	 */
-    --container-max-width-1: 1620px;
-    --container-max-width-2: 1140px;
-    --container-max-width-3: 940px;
+    --container-max-width-1: 1440px;
+    --container-max-width-2: 1264px;
 
     /* Default padding */
-    --container-padding-xl: 50px;
-    --container-padding-lg: 40px;
+    --container-padding-xl: 80px;
+    --container-padding-lg: 64px;
     --container-padding-sm: 4.5vw;
 
     /**
